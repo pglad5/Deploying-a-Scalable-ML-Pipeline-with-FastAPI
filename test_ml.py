@@ -16,7 +16,7 @@ def test_row_count():
     # test row count
     """
     # Your code here
-    
+    data = pd.read_csv("data/census.csv")
     assert 32000 < data.shape[0] < 32600
     #pass
 
@@ -27,7 +27,7 @@ def test_data_columns():
     # Test the column names are correct
     """
     # Your code here
-   
+    data = pd.read_csv("data/census.csv")
     correct_columns = ["age", "workclass", "fnlgt","education", "education-num", "marital-status", "occupation", "relationship", "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country", "salary"]
      
     columns=data.columns.values
@@ -42,10 +42,9 @@ def test_salary():
     # testing the salary options
     """
     # Your code here
-    #data = pd.read_csv("data/census.csv")
+    data = pd.read_csv("data/census.csv")
     known_salary = ["<=50K", ">50K"]
 
-    salary_data =set(data['salary'].unique())
 
-    assert set(known_salary) == set(salary_data)
+    assert set(known_salary) == set(data['salary'].unique())
     #pass
