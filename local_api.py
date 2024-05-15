@@ -12,6 +12,7 @@ print(r.json()["Welcome_message"])
 
 
 
+
 data = {
     "age": 37,
     "workclass": "Private",

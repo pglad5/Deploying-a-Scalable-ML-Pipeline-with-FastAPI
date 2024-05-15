@@ -7,6 +7,7 @@ import numpy as np
 
 
 
+
 data = pd.read_csv("data/census.csv")
 
 # TODO: implement the first test. Change the function name and input as needed
