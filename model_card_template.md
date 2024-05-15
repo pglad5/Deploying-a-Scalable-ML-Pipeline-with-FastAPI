@@ -17,6 +17,9 @@ The Census dataset was used. It is publicly available and generally considered a
 
 ## Metrics
 _Please include the metrics used and your model's performance on those metrics._
+precision
+recall
+
 
 ## Ethical Considerations
 The data does use sensitive data (age, race, etc). It is not intended to inform decisions. Assumption on salary is not necessarily a positive for any individual person. The risks were considered but remain unknown. However, a user should be cautious in how they apply the usage of this model. 
