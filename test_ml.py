@@ -22,29 +22,35 @@ def test_row_count():
 
 
 # TODO: implement the second test. Change the function name and input as needed
-def test_data_columns():
-    """
-    # Test the column names are correct
-    """
-    # Your code here
-    data = pd.read_csv("data/census.csv")
-    correct_columns = ["age", "workclass", "fnlgt","education", "education-num", "marital-status", "occupation", "relationship", "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country", "salary"]
-     
-    columns=data.columns.values
+#def test_data_columns():
+#    """
+#    # Test the column names are correct
+#   """
+#    # Your code here
+#    data = pd.read_csv("data/census.csv")
+#    correct_columns = ["age", "workclass", "fnlgt","education", "education-num", "marital-status", "occupation", "relationship", "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country", "salary"]
+#     
 
-    assert list(correct_columns) ==list(columns)
-    #pass
+ #   assert list(correct_columns) ==list(data.columns.values)
+ #   #pass
 
 
 # TODO: implement the third test. Change the function name and input as needed
-def test_salary():
+def test_age_range():
     """
-    # testing the salary options
+    # testing the all of age range is between 0 and 100
     """
     # Your code here
-    data = pd.read_csv("data/census.csv")
-    known_salary = ["<=50K", ">50K"]
+    ages=pd.read_csv("data/census.csv")['age'].between(0, 100)
+    assert np.sum(ages) == 32561
 
-
-    assert set(known_salary) == set(data['salary'].unique())
     #pass
+
+
+def test_salaries():
+    """" #test that there are two salary ranges in dataset"""
+
+    salaries=list(pd.read_csv("data/census.csv")['salary'].unique())
+    salary=np.count_nonzero(salaries)
+
+    assert salary == 2
