@@ -4,7 +4,7 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 
 ## Model Details
 Developed by Pianjo Glad, 2024, v1.
-The model type is a logistic regression model. For more information, see Udacity project, "Deploying a Maching Learning Model with FastAPI". Project can be cited as "Deploying a Machine Learning Model with FastAPI - pglad". No License. For further information, contact pglad5@wgu.edu.
+The model type is a logistic regression model. For more information, see Udacity project, "Deploying a Maching Learning Model with FastAPI". Project can be cited as "Deploying a Machine Learning Model with FastAPI - pglad". For further information, contact pglad5@wgu.edu.
 
 ## Intended Use
 The Primary intended use is to predict someones income based on background informaiton about them. The Primary intended use was made for educational purposes in learning about machine learning. Out-of-scope uses include applying to real life situations. There needs to be more data in the training model. 
@@ -17,8 +17,7 @@ The Census dataset was used. It is publicly available and generally considered a
 
 ## Metrics
 _Please include the metrics used and your model's performance on those metrics._
-precision
-recall
+Precision: 0.7319 | Recall: 0.2807 | F1: 0.4058
 
 
 ## Ethical Considerations
