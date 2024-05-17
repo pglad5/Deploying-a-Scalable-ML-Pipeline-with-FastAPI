@@ -21,7 +21,7 @@ jobs:
         pip install -r requirements.txt
     - name: Analysing the code with flake 8
       run: |
-        flake8 --exit-zero --extend-ignore=E,F,W
+        flake8 #--exit-zero --extend-ignore=E,F,W
         
         
     - name: Analysing the code with pytest
