@@ -1,4 +1,4 @@
-import os
+#import os
 
 import pandas as pd
 from fastapi import FastAPI
@@ -9,7 +9,7 @@ from ml.data import apply_label, process_data
 from ml.model import inference, load_model
 
 # DO NOT MODIFY
-class Data(BaseModel):
+class  Data(BaseModel):
     age: int = Field(..., example=37)
     workclass: str = Field(..., example="Private")
     fnlgt: int = Field(..., example=178356)
@@ -27,9 +27,10 @@ class Data(BaseModel):
     hours_per_week: int = Field(..., example=40, alias="hours-per-week")
     native_country: str = Field(..., example="United-States", alias="native-country")
 
-#path = "model/encoder.pkl" # TODO: enter the path for the saved encoder 
+#path = "model/encoder.pkl" #TODO: enter the path for the saved encoder
 path = encoder_path
 encoder = load_model(path)
+
 
 #path = "model/model.pkl" # TODO: enter the path for the saved model 
 path = model_path
