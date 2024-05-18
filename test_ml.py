@@ -20,7 +20,7 @@ def test_row_count():
     # pass
 
 
-#  TODO: implement the second test. Change the function 
+#  TODO: implement the second test. Change the function
 # name and input as needed
 #  def test_data_columns():
 #    """
