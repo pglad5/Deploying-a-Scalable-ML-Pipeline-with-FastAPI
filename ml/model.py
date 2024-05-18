@@ -2,7 +2,7 @@ import pickle
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from ml.data import process_data
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import f1_score
+# from sklearn.metrics import f1_score
 
 # TODO: add necessary import
 
@@ -101,7 +101,8 @@ def load_model(path):
 def performance_on_categorical_slice(
     data, column_name, slice_value, categorical_features, label, encoder, lb, model
 ):
-    """ Computes the model metrics on a slice of the data specified by a column name and
+    """ Computes the model metrics on a slice of the data specified by a column name 
+    and
 
     Processes the data using one hot encoding for the categorical features and a
     label binarizer for the labels. This can be used in either training or
