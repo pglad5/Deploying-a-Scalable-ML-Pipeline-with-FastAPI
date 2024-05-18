@@ -71,6 +71,8 @@ def inference(model, X):
     # TODO: implement the function##
     preds = model.predict(X)
     return preds
+    
+    
     ###############################
     # pass
 
@@ -104,7 +106,7 @@ def performance_on_categorical_slice(
     data, column_name, slice_value, categorical_features, label, encoder,
     lb, model
 ):
-    """ Computes the model metrics on a slice of the data specified 
+    """ Computes the model metrics on a slice of the data specified
     by a column name and
 
     Processes the data using one hot encoding for the categorical features and
@@ -114,7 +116,7 @@ def performance_on_categorical_slice(
     Inputs
     ------
     data : pd.DataFrame
-        Dataframe containing the features and label. 
+        Dataframe containing the features and label.
         Columns in `categorical_features`
     column_name : str
         Column containing the sliced feature.
@@ -123,7 +125,7 @@ def performance_on_categorical_slice(
     categorical_features: list
         List containing the names of the categorical features (default=[])
     label : str
-        Name of the label column in `X`. 
+        Name of the label column in `X`.
         If None, then an empty array will be returned
         for y (default=None)
     encoder : sklearn.preprocessing._encoders.OneHotEncoder
@@ -144,9 +146,9 @@ def performance_on_categorical_slice(
     X_slice, y_slice, _, _ = process_data(
         # your code here
         X=data[data[column_name] == slice_value],
-            categorical_features=categorical_features,
-            label=label, training=False, encoder=encoder, lb=lb
-        # for input data, use data in column given as "column_name", 
+        categorical_features=categorical_features,
+        label=label, training=False, encoder=encoder, lb=lb
+        # for input data, use data in column given as "column_name",
         # with the slice_value
         # use training = False
     )

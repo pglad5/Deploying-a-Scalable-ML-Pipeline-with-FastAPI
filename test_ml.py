@@ -17,17 +17,18 @@ def test_row_count():
     # Your code here
     data = pd.read_csv("data/census.csv")
     assert 32000 < data.shape[0] < 32600
-    #pass
+    # pass
 
 
-#  TODO: implement the second test. Change the function name and input as needed
+#  TODO: implement the second test. Change the function 
+# name and input as needed
 #  def test_data_columns():
 #    """
 #    # Test the column names are correct
 #   """
 #    # Your code here
 #    data = pd.read_csv("data/census.csv")
-#  correct_columns = ["age", "workclass", 
+#  correct_columns = ["age", "workclass",
 #  "fnlgt","education", "education-num", "marital-status", "occupation",
 #  "relationship", "race", "sex", "capital-gain", "capital-loss",
 #  "hours-per-week", "native-country", "salary"]
