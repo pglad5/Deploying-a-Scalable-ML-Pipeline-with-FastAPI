@@ -1,4 +1,4 @@
-#import os
+# import os
 
 import pandas as pd
 from fastapi import FastAPI
@@ -10,7 +10,7 @@ from ml.model import inference, load_model
 
 
 # DO NOT MODIFY
-class  Data(BaseModel):
+class Data(BaseModel):
     age: int = Field(..., example=37)
     workclass: str = Field(..., example="Private")
     fnlgt: int = Field(..., example=178356)
@@ -30,8 +30,11 @@ class  Data(BaseModel):
         ..., example="United-States", alias="native-country"
         )
 
+
 # path = "model/encoder.pkl" #TODO: enter the path for the saved encoder
 path = encoder_path
+
+
 encoder = load_model(path)
 
 
@@ -41,6 +44,7 @@ model = load_model(path)
 
 # TODO: create a RESTful API using FastAPI
 app = FastAPI()  # your code here
+
 
 # TODO: create a GET on the root giving a welcome message
 
@@ -59,8 +63,9 @@ async def post_inference(data: Data):
     data_dict = data.dict()
 
     # DO NOT MODIFY: clean up the dict to turn it into a Pandas DataFrame.
-    # The data has names with hyphens and Python does not allow those as variable names.
-    # Here it uses the functionality of 
+    # The data has names with hyphens and Python does not allow
+    # those as variable names.
+    # Here it uses the functionality of
     # FastAPI/Pydantic/etc to deal with this.
     data = {k.replace("_", "-"): [v] for k, v in data_dict.items()}
     data = pd.DataFrame.from_dict(data)
@@ -89,7 +94,7 @@ async def post_inference(data: Data):
     # do not need to pass lb as input
 
     # your code here to predict the result using data_processed
-    _inference=inference(model= model, X=data_processed)
+    _inference = inference(model=model, X=data_processed)
     print("inference_successful")
 
     return {"result": apply_label(_inference)}

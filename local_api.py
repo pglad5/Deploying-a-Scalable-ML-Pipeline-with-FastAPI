@@ -9,7 +9,7 @@ r = requests.get("http://127.0.0.1:8000")  # Your code here
 print(r.status_code)
 # TODO: print the welcome message
 print(r.json()["Welcome_message"])
-data={
+data = {
     "age": 37,
     "workclass": "Private",
     "fnlgt": 178356,
